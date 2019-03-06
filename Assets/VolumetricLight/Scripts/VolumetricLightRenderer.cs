@@ -27,6 +27,28 @@
 
 
 
+/*
+
+cam = GetComponent<Camera>();
+Matrix4x4 inverseViewProjectionMatrix = GL.GetGPUProjectionMatrix(cam.projectionMatrix, true);
+inverseViewProjectionMatrix *= cam.worldToCameraMatrix;
+inverseViewProjectionMatrix = inverseViewProjectionMatrix.inverse;
+Vector3 leftBottom = inverseViewProjectionMatrix.MultiplyPoint(new Vector3(-1, -1, 1));
+Vector3 rightBottom = inverseViewProjectionMatrix.MultiplyPoint(new Vector3(1, -1, 1));
+Vector3 leftTop = inverseViewProjectionMatrix.MultiplyPoint(new Vector3(-1, 1, 1));
+Vector3 rightTop = inverseViewProjectionMatrix.MultiplyPoint(new Vector3(1, 1, 1));
+
+cam = GetComponent<Camera>();
+Matrix4x4 inverseViewProjectionMatrix = GL.GetGPUProjectionMatrix(cam.projectionMatrix, true);
+inverseViewProjectionMatrix *= cam.worldToCameraMatrix;
+inverseViewProjectionMatrix = inverseViewProjectionMatrix.inverse;
+Vector3 leftBottom = inverseViewProjectionMatrix.MultiplyPoint(new Vector3(-1, -1, 0));
+Vector3 rightBottom = inverseViewProjectionMatrix.MultiplyPoint(new Vector3(1, -1, 0));
+Vector3 leftTop = inverseViewProjectionMatrix.MultiplyPoint(new Vector3(-1, 1, 0));
+Vector3 rightTop = inverseViewProjectionMatrix.MultiplyPoint(new Vector3(1, 1, 0));
+
+*/
+
 using UnityEngine;
 using System.Collections;
 using UnityEngine.Rendering;
